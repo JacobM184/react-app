@@ -1,0 +1,30 @@
+.caseBtn{
+    background-color: #484e5a;
+    border-radius: 5px;
+    color: #61dafb;
+    display: inline-flex;
+    align-content: center;
+    padding: 0.5em 0.5em;
+    border-color: #61dafb;
+    margin: 0.5rem;
+}
+
+.caseBtn:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+.active {
+    color:orangered;
+    font-family: 'Roboto';
+}
+
+.deaths {
+    color: gold;
+    font-family: 'Roboto';
+}
+
+.recovered {
+    color:chartreuse;
+  font-family: 'Roboto';
+}
