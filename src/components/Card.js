@@ -28,7 +28,7 @@ const Card = () => {
     // console.log(parentData)
 
     return (<div className="container">
-        <h1 className="header">Today's COVID Cases:</h1>
+        <h1 className="header">Total COVID Cases:</h1>
         {hasData ? <Dropdown dataBase={parentData}/> : <p className="loadingAnim">Loading...</p>}
     </div>);
 }
