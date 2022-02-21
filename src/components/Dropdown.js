@@ -9,32 +9,22 @@ const categories = ["Auckland", "Bay of Plenty", "Canterbury", "Capital and Coas
 const Dropdown = (props) => {
 
     const [dhbSelection, setDhbSelection] = useState("Choose a DHB...")
-    const [dataBase, setDataBase] = useState([])
 
-    const handleSelectionChange = async (e) =>{
-        await setDhbSelection(e.target.value)
-        updateData()
-        console.log(dataBase)
-    }
-
-    const checkDHB = (dhb) => {
-        return dhb.Geo === dhbSelection;
-    }
-
-    const showOption = dhbSelection === "Choose a DHB..." ? true : false;
-    const showData = dataBase.length > 0;
-
-    async function updateData(){
-        let res = []
-        res = await props.dataBase.filter(checkDHB)
-        await setDataBase(res)
-    }
-
-    useEffect(() => {
-
-        updateData()
+    const handleSelectionChange = (e) =>{
+        let option = e.target.value
         
-    }, [])
+        setDhbSelection(option)
+        
+    }
+
+    const dataBase = props.dataBase.filter((data) => {
+        return data.Geo == dhbSelection;
+    })
+    // console.log(dhbSelection)
+    // console.log(dataBase)
+
+    const showOption = dhbSelection === "Choose a DHB...";
+    const showData = dataBase.length > 0;
 
     return(
         <div>
@@ -45,9 +35,10 @@ const Dropdown = (props) => {
                 })}
             </select>
             
-            {showData ? <CaseDisp data={dataBase}/> : ""}
+            {showData ? <CaseDisp active={dataBase[0].Value} death={dataBase[1].Value} recovered={dataBase[2].Value} /> : ""}
       </div>
     )
 }
+// data={dataBase} active={dataBase[0].Value} death={dataBase[1].Value} recovered={dataBase[2].Value}
 
 export default Dropdown
