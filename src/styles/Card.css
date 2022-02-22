@@ -23,9 +23,39 @@
     margin-bottom: 20px;
     font-family: 'Roboto';
     text-size-adjust: auto;
+    color: #61dafb;
   }
 
 .loadingAnim {
   color: #61dafb;
+  font-family:'Roboto';
+}
+
+.new-cases{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
   font-family: 'Roboto';
+  text-size-adjust: auto;
+  color:orangered;
+}
+
+.new-case-title{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    text-size-adjust: auto;
+    color: #61dafb;
+}
+
+.dropdown-title{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    text-size-adjust: auto;
+    color: #61dafb;
 }
