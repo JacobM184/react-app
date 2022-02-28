@@ -47,10 +47,13 @@ const Card = () => {
     // get previous active cases minus the new deaths and recoveries
     const prevActive = hasData ? cumulative[cumulative.length-6].Value - newDeaths - newRecovery: 0
 
+    const prevDate = hasData ? cumulative[cumulative.length-6].Period: "NoDate"
+
 
     return (<div className="container">
         <h1 className="header">COVID-19 Dashboard</h1>
-        {hasData ? <><h4 className="new-case-title">New {currActive.Label1} Cases ({currActive.Period}):</h4> <h4 className="new-cases">{currActive.Value - prevActive}</h4></> : ""}
+        {hasData ? <><h4 className="new-case-title">New {currActive.Label1} Cases (since {prevDate}):</h4> 
+        <h4 className="new-cases">{currActive.Value - prevActive}</h4></> : ""}
         {hasData ? <><h4 className="dropdown-title">Total cases by District Health Board:</h4><Dropdown dataBase={parentData}/></> : <p className="loadingAnim">Loading...</p>}
     </div>);
 }
