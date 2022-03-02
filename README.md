@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# COVID-19 Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+The goal of this project was to create a simple ReactJS application that displays COVID-19 case numbers in New Zealand. 
 
-## Available Scripts
+In order to achieve this, data was collected in JSON format through the [REST API](https://api.stats.govt.nz) that Stats NZ provides. You can find more about REST APIs in general [here](https://restfulapi.net).
 
-In the project directory, you can run:
+The deployed COVID-19 Dashboard site can be accessed [here](https://jacobm184.github.io/react-app/).
 
-### `npm start`
+## Features
+This web application has two main features:
+- Displays the `New Active Cases` for each day.
+- Displays the total `Active cases`, total `Recovered cases`, and total `Deaths` filtered by District Health Board (DHB) .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Known Issues
+- The Stats NZ COVID-19 database is currently not updated on Saturdays and Sundays.
+- The Stats NZ COVID-19 database updates around 5:00pm - 5:30pm each day, and so (depending on when you access the site) the data may not be the most up-to-date.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Running the code locally
+If you wish to run the code for this project from your local host, do the following:
 
-### `npm test`
+- [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) the repository
+- Navigate to the project folder using your terminal
+- Type: npm start
+- Run the above command (press Enter)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: the above instruction assumes youhave [NodeJS](https://nodejs.org/en/) installed. If not, please donload and install it first.
